@@ -1,10 +1,22 @@
-﻿namespace Terminal.UnitTests;
+﻿using Terminal.Core;
 
-public class UnitTest1
+namespace Terminal.UnitTests;
+
+public class BondinhoTest
 {
-    [Fact]
-    public void Test1()
-    {
 
+    private readonly Bondinho bondinho = new();
+
+    [Fact]
+    public void CapacidadeTest()
+    {
+        //Arrange
+        bondinho.alunos = 11;
+        bondinho.monitores = 12;
+        
+        //Act
+        int result = BonhinhoService.Capacidade(bondinho);
+        //Assert
+        Assert.Equal(23,result);
     }
 }
