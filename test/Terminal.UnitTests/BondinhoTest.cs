@@ -15,7 +15,7 @@ public class BondinhoTest
         bondinho.monitores = 12;
         
         //Act
-        int result = BonhinhoService.Capacidade(bondinho);
+        int result = Bondinho.Capacidade(bondinho);
         //Assert
         Assert.Equal(23,result);
     }
